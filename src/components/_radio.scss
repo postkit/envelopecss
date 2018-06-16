@@ -1,0 +1,23 @@
+.fake-radio {
+    @extend %fake-checkbox;
+    border-radius: 50% !important;
+
+    &::after {
+        border-radius: 50% !important;
+    }
+}
+
+.radio-actual {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    float: left;
+    margin: 0;
+
+    &:checked + .fake-radio {
+        &::after {
+            transform: scale(1);
+        }
+    }
+}

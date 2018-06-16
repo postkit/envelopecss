@@ -1,0 +1,38 @@
+.file {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: lighten($lightgrey, 10%);
+    border-radius: $curve-radius;
+}
+
+.file-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    float: left;
+}
+
+.file-button {
+    display: inline-block;
+    background-color: $primary;
+    font-size: 0.875rem;
+    border: none;
+    color: $white;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    transition: all 0.2s ease-in-out;
+}
+
+.file-name {
+    float: left;
+    font-size: 0.875rem;
+    padding: 0 0.5rem;
+    margin-top: 0.475rem;
+
+    &:empty {
+        padding: 0;
+    }
+}

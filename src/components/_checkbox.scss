@@ -1,0 +1,54 @@
+%fake-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $lightgrey;
+    display: inline-block;
+    float: left;
+    margin: -2px 0 0 0;
+    position: relative;
+
+    &::after {
+        content: " ";
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        background-color: $primary;
+        transform: scale(0);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.fake-checkbox {
+    @extend %fake-checkbox;
+
+    &.border-curved {
+        &::after {
+            border-radius: $curve-radius;
+        }
+    }
+}
+
+.checkbox-actual {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    float: left;
+    margin: 0;
+
+    &:checked + .fake-checkbox {
+        &::after {
+            transform: scale(1);
+        }
+    }
+}
+
+.checkbox-label {
+    width: calc(100% - 30px);
+    margin: 0 0 -2px 5px;
+    font-size: 0.875rem;
+    float: right;
+}

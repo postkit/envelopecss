@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./dest/envelope.min.css">
+        <title>Envelope CSS Demo</title>
+    </head>
+    <body>
+        <div class="panel border-curved">
+            <h1>Postkit Envelope CSS Demo</h1>
+            <form action="#">
+                <div class="form-row clearfix">
+                    <div class="form-half">
+                        <label>
+                            <span class="label">First Name</span>
+                            <input type="text" name="fname" class="text-input border-curved" placeholder="First name">
+                        </label>
+                    </div>
+                    <div class="form-half">
+                        <label>
+                            <span class="label">Last Name</span>
+                            <input type="text" name="lname" class="text-input border-curved" placeholder="Last name">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <label>
+                        <span class="label">Email</span>
+                        <input type="email" name="email" class="text-input border-curved" placeholder="Your email address">
+                    </label>
+                </div>
+                <div class="form-row clearfix">
+                    <label>
+                        <span class="label">Prefix</span>
+                        <div class="select-wrap">
+                            <select class="select border-curved">
+                                <option value="option1">Mr</option>
+                                <option value="option2">Mrs</option>
+                                <option value="option3">Miss</option>
+                                <option value="option4">Prof.</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+                <div class="form-row clearfix">
+                    <label>
+                        <span class="label">Message</span>
+                        <textarea name="message" class="text-input text-area border-curved" placeholder="Your message"></textarea>
+                    </label>
+                </div>
+                <div class="form-row clearfix">
+                    <p class="label no-margin">Checkboxes:</p>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-half">
+                        <label>
+                            <input type="checkbox" name="checkbox1" class="checkbox-actual">
+                            <span class="fake-checkbox border-curved"></span>
+                            <span class="checkbox-label">Checkbox 1.</span>
+                        </label>
+                    </div>
+                    <div class="form-half">
+                        <label>
+                            <input type="checkbox" name="checkbox2" class="checkbox-actual">
+                            <span class="fake-checkbox border-curved"></span>
+                            <span class="checkbox-label">Checkbox 2.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-half">
+                        <label>
+                            <input type="checkbox" name="checkbox3" class="checkbox-actual">
+                            <span class="fake-checkbox border-curved"></span>
+                            <span class="checkbox-label">Checkbox 3.</span>
+                        </label>
+                    </div>
+                    <div class="form-half">
+                        <label>
+                            <input type="checkbox" name="checkbox4" class="checkbox-actual">
+                            <span class="fake-checkbox border-curved"></span>
+                            <span class="checkbox-label">Checkbox 4.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <p class="label no-margin">Radio buttons:</p>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-half">
+                        <label>
+                            <input type="radio" name="option" value="1" class="radio-actual">
+                            <span class="fake-radio border-curved"></span>
+                            <span class="checkbox-label">Option 1.</span>
+                        </label>
+                    </div>
+                    <div class="form-half">
+                        <label>
+                            <input type="radio" name="option" value="2" class="radio-actual">
+                            <span class="fake-radio border-curved"></span>
+                            <span class="checkbox-label">Option 2.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-half">
+                        <label>
+                            <input type="radio" name="option" value="3" class="radio-actual">
+                            <span class="fake-radio border-curved"></span>
+                            <span class="checkbox-label">Option 3.</span>
+                        </label>
+                    </div>
+                    <div class="form-half">
+                        <label>
+                            <input type="radio" name="option" value="4" class="radio-actual">
+                            <span class="fake-radio border-curved"></span>
+                            <span class="checkbox-label">Option 4.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <p class="label no-margin">File upload:</p>
+                </div>
+                <div class="form-row clearfix">
+                    <label class="file">
+                        <input type="file" class="file-input" id="file-input">
+                        <span class="file-button border-curved">Upload</span>
+                        <span class="file-name" id="file-name"></span>
+                    </label>
+                </div>
+                <div class="form-row clearfix align-center">
+                    <button class="button border-curved">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            var fileInput = document.getElementById('file-input');
+            var fileName = document.getElementById('file-name');
+            fileInput.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                fileName.innerText = file.name;
+            });
+        </script>
+    </body>
+</html>

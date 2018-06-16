@@ -1,0 +1,32 @@
+$white: #FFFFFF;
+$black: #000000;
+
+$lightgrey: #D6D6D6;
+$primary: #074dfc;
+
+$curve-radius: 3px;
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: $black;
+
+    & * {
+        box-sizing: border-box;
+    }
+}
+
+@import "./layout";
+
+@import "./components/panel";
+@import "./components/textinputs";
+@import "./components/label";
+@import "./components/select";
+@import "./components/checkbox";
+@import "./components/radio";
+@import "./components/file";
+@import "./components/button";
+
+@import "./utils";
+
+@import "./media";

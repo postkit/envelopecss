@@ -1,0 +1,12 @@
+@media screen and (max-width: 812px) {
+    .form-half {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 1.25rem;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}

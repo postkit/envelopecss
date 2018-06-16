@@ -1,0 +1,23 @@
+.clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.border-curved {
+    border-radius: $curve-radius;
+}
+
+.no-border {
+    border: none;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}

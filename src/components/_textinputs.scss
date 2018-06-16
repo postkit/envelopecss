@@ -1,0 +1,28 @@
+%text-input {
+    width: 100%;
+    border: none;
+    appearance: none;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid $lightgrey;
+    background-color: $white;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+        outline: none;
+        border: 1px solid darken($lightgrey, 30%);
+    }
+    &::placeholder {
+        color: $lightgrey;
+    }
+}
+
+.text-input {
+    @extend %text-input;
+}
+
+.text-area {
+    @extend %text-input;
+    resize: none;
+    min-height: 120px;
+}
